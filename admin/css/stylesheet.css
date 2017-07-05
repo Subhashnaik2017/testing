@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,900');
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.bootstrap-tagsinput {
+  margin-bottom: 0 !important;
+}
+.mainnav-profile .profile-wrap {
+  background: none;
+}
+textarea {
+  resize: vertical;
+}
