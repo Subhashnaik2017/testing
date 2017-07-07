@@ -196,26 +196,7 @@
       <div id="content-container">
         <!--Page Title-->
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-        <div id="page-title">
-          <h1 class="page-header text-overflow">Dashboard</h1>
-          <!--Searchbox-->
-          <div class="searchbox">
-            <div class="input-group custom-search-form">
-              <input type="text" class="form-control" placeholder="Search..">
-              <span class="input-group-btn">
-                <button class="text-muted" type="button"><i class="pli-magnifi-glass"></i></button>
-              </span>
-            </div>
-          </div>
-        </div>
-        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
-        <!--End page title-->
-
-        <!--Page content-->
-        <!--===================================================-->
-        <div id="page-content">
-         <?php $this->load->view($view_file); ?>
-        </div>
+          <?php $this->load->view($view_file); ?>
         <!--===================================================-->
         <!--End page content-->
       </div>
@@ -302,7 +283,16 @@
                   </li>
                   <!--Menu list item-->
                   <li>
-                    <a href="#">
+                  <?php $create_course_url = base_url()."Course/create_course";?>
+                  <?php $mangae_course_url = base_url()."Course/manage_course";?>
+                  <?php $create_institute_url = base_url()."institute/create_institute";?>
+                  <?php $mangae_institute_url = base_url()."institute/manage_institute";?>
+                  <?php $create_student_url = base_url()."student/add_student";?>
+                  <?php $manage_student_url = base_url()."student/manage_student";?>
+                  <?php $create_category_url = base_url()."category/manage_category";?>
+                  <?php $create_jobprofile_url = base_url()."category/manage_jobprofile";?>
+                  <?php $create_recruiter_url = base_url()."category/manage_recruiter";?>
+                    <a href="#"
 	                    <i class="psi-diploma-2"></i>
 	                    <span class="menu-title">
 												<strong>Course</strong>
@@ -311,8 +301,9 @@
 		                </a>
                     <!--Submenu-->
                     <ul class="collapse">
-                      <li><a href="create-course.html">Create Course</a></li>
-                      <li><a href="manage-course.html">Manage Courses</a></li>
+                      <li><a href="<?= $create_course_url ;?>">Create Course</a></li>
+                   
+                      <li><a href="<?= $mangae_course_url ;?>">Manage Courses</a></li>
                     </ul>
                   </li>
                   <!--Menu list item-->
@@ -326,8 +317,8 @@
 		                </a>
                     <!--Submenu-->
                     <ul class="collapse">
-                      <li><a href="create-institute.html">Register Institute</a></li>
-                      <li><a href="manage-institute.html">Manage Institutes</a></li>
+                      <li><a href="<?=$create_institute_url; ?>">Register Institute</a></li>
+                      <li><a href="<?=$mangae_institute_url; ?>">Manage Institutes</a></li>
                     </ul>
                   </li>
                   <!--Menu list item-->
@@ -341,8 +332,8 @@
                     </a>
                     <!--Submenu-->
                     <ul class="collapse">
-                      <li><a href="create-student.html">Register Student</a></li>
-                      <li><a href="manage-student.html">Manage Students</a></li>
+                      <li><a href="<?=$create_student_url ; ?>">Register Student</a></li>
+                      <li><a href="<?=$manage_student_url;?>">Manage Students</a></li>
                     </ul>
                   </li>
 
@@ -353,7 +344,7 @@
                   <li class="list-header">Manage Attributes</li>
                   <!--Menu list item-->
                   <li>
-                    <a href="manage-category.html">
+                    <a href="<?=$create_category_url ;?>">
 	                    <i class="psi-bookmark"></i>
 	                    <span class="menu-title">
 												<strong>Manage Category</strong>
@@ -362,7 +353,7 @@
                   </li>
                   <!--Menu list item-->
                   <li>
-                    <a href="manage-job-profile.html">
+                    <a href="<?=$create_jobprofile_url;?>">
 	                    <i class="psi-mail-3"></i>
 	                    <span class="menu-title">
 												<strong>Manage Job Profile</strong>
@@ -371,7 +362,7 @@
                   </li>
                   <!--Menu list item-->
                   <li>
-                    <a href="manage-recruiter.html">
+                    <a href="<?=$create_recruiter_url;?>">
 	                    <i class="psi-letter-open"></i>
 	                    <span class="menu-title">
 												<strong>Manage Recruiter</strong>
